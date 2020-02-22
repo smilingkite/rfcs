@@ -165,3 +165,14 @@ The remaining question is that 3rd party custom elements could have unknown prop
 This would tell Vue to bind `v-model` using the same logic for `<input type="checkbox">`, using `checked` as the prop and `change` as the event.
 
 If the custom element doesn't behave like any existing input type, then it's probably better off to use explicit `v-bind` and `v-on` bindings.
+
+---
+To customize v-model in Vue 2.* one can use the following syntax:
+
+```
+model: {
+  prop: 'checked',
+  event: 'change'
+}
+```
+It is unclear (to me) if this is a breaking change and what a migration path is. 
